@@ -1,0 +1,14 @@
+package HomeWork7;
+
+import java.io.Serializable;
+
+public abstract class Animal implements Serializable {
+    private static final long serialVersionUID = 1L;
+    protected String name; 
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    
+    public abstract void speak();
+}
