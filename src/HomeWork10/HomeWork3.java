@@ -15,15 +15,15 @@ public class HomeWork3 {
             System.out.println("請輸入日期 (年月日，例如: 20110131)：");
             input = sc.next();
 
-            // 1. 正規表示法檢查：必須剛好 8 位數字
+            
             if (!input.matches("\\d{8}")) {
                 System.out.println("日期格式不正確，請再輸入一次！");
                 continue;
             }
 
-            // 2. 嘗試解析日期，並檢查日期合法性 (如：有沒有 13 月或 2 月 30 號)
+            
             SimpleDateFormat sdfInput = new SimpleDateFormat("yyyyMMdd");
-            sdfInput.setLenient(false); // 嚴謹模式：若日期不合理會拋出例外
+            sdfInput.setLenient(false); 
 
             try {
                 Date date = sdfInput.parse(input);
@@ -51,7 +51,7 @@ public class HomeWork3 {
                         System.out.println("無此選項，請重新輸入日期與選擇！");
                         continue;
                 }
-                break; // 成功印出格式，跳出迴圈
+                break; 
 
             } catch (ParseException e) {
                 System.out.println("無效的日期內容，請重新輸入！");
